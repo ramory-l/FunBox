@@ -7,8 +7,8 @@ function App() {
   let foods = data.foods;
   return (
     <div className="App">
-      <header className="App__header">Ты сегодня покормил кота?</header>
-      <div className="App__container">
+      <header className="App-header">Ты сегодня покормил кота?</header>
+      <div className="App-container">
         {foods.map((food) => {
           return <PackOfFeed key={food.id} info={food} />;
         })}

@@ -10,14 +10,14 @@
   background-position: top left top left;
 }
 
-.App__header {
+.App-header {
   color: white;
   font-size: 36px;
   margin: 47px 0 23px 0; /* top 47 bottom 23 */
   font-family: "Exo 2", serif;
 }
 
-.App__container {
+.App-container {
   position: relative;
   width: 100%;
   display: flex;

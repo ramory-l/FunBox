@@ -1,112 +1,18 @@
-.packOfFeed {
+.PackOfFeed {
   position: relative;
   width: 320px;
   height: 460px;
-  background-color: white;
-  border: 4px solid #1698d9;
-}
-
-.packOfFeed__selected {
-  position: relative;
-  width: 320px;
-  height: 460px;
-  background-color: white;
-  border: 4px solid #d91667;
-}
-
-.packOfFeed__slogan {
-  position: absolute;
-  top: 28px;
-  left: 52px;
-  font-size: 16px;
-  font-family: "Trebuchet MS";
-  color: #666666;
-}
-
-.packOfFeed__brandName {
-  position: absolute;
-  top: 59px;
-  left: 50px;
-  font-size: 48px;
-  font-family: "Trebuchet MS";
-  font-weight: bold;
-  color: black;
-}
-
-.packOfFeed__taste {
-  position: absolute;
-  top: 104px;
-  left: 48px;
-  font-size: 24px;
-  font-family: "Trebuchet MS";
-  font-weight: bold;
-  color: black;
-}
-
-.packOfFeed__numberOfServings {
-  position: absolute;
-  top: 144px;
-  left: 48px;
-  font-size: 14px;
-  font-family: "Trebuchet MS";
-  width: 150px;
-  color: #666666;
-}
-
-.packOfFeed_info {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(125deg, transparent 30px, white 0);
+  box-shadow: 0 0 0 4px #1698d9;
+  border-radius: 6px;
   overflow: hidden;
 }
 
-.packOfFeed__cat {
-  position: absolute;
-  bottom: -88px;
-  left: -24px;
+.PackOfFeed_selected {
+  box-shadow: 0 0 0 4px #d91667;
 }
 
-.packOfFeed__ball {
-  position: absolute;
-  background: #1698d9;
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  right: 16px;
-  bottom: 16px;
-}
-
-.packOfFeed__ball__selected {
-  position: absolute;
-  background: #d91667;
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  right: 16px;
-  bottom: 16px;
-}
-
-.packOfFeed__weight {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.packOfFeed_weight_value {
-  font-size: 42px;
-  text-align: center;
-  font-family: "Trebuchet MS";
-  color: white;
-}
-
-.packOfFeed_weight_measure {
-  font-size: 21px;
-  text-align: center;
-  font-family: "Trebuchet MS";
-  color: white;
-}
-
-.packOfFeed__description {
+.PackOfFeed-caption {
   text-align: center;
   color: white;
   font-size: 13px;
@@ -114,12 +20,12 @@
   font-family: "Trebuchet MS", serif;
 }
 
-.packOfFeed__description__link {
+.PackOfFeed-caption_link {
   color: #138ac6;
   text-decoration: none;
   border-bottom: 1px dashed;
 }
 
-.packOfFeed__description__link_ {
+.PackOfFeed-caption_link_ {
   color: #138ac6;
 }

@@ -1,0 +1,33 @@
+.Description {
+  margin: 25px 0 0 46px;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.Description-slogan {
+  font-size: 16px;
+  font-family: "Trebuchet MS";
+  color: #666666;
+}
+
+.Description-brandName {
+  font-size: 48px;
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+  color: black;
+}
+
+.Description-taste {
+  font-size: 24px;
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+  color: black;
+}
+
+.Description-numberOfServings {
+  font-size: 14px;
+  font-family: "Trebuchet MS";
+  width: 150px;
+  color: #666666;
+}
