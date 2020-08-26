@@ -2,14 +2,92 @@
   position: relative;
   width: 320px;
   height: 460px;
-  background: linear-gradient(125deg, transparent 30px, white 0);
-  box-shadow: 0 0 0 4px #1698d9;
-  border-radius: 6px;
+  background-color: #1698d9;
+  border-radius: 10px;
+  border: 4px solid #1698d9;
+  clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+  overflow: hidden;
+}
+
+.PackOfFeed::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 320px;
+  height: 460px;
+  background-color: white;
+  border-radius: 10px;
+  clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
   overflow: hidden;
 }
 
 .PackOfFeed_selected {
-  box-shadow: 0 0 0 4px #d91667;
+  border: 4px solid #d91667;
+  background-color: #d91667;
+}
+
+/* .PackOfFeed_hover {
+  border: 4px solid #2ea8e6;
+  background-color: #2ea8e6;
+} */
+
+.PackOfFeed_ended {
+  border: 4px solid #b3b3b3;
+  background-color: #b3b3b3;
+}
+
+.PackOfFeed-cat {
+  position: absolute;
+  bottom: -88px;
+  left: -24px;
+}
+
+.PackOfFeed-cat_ended {
+  opacity: 0.5;
+}
+
+.PackOfFeed-ball {
+  position: absolute;
+  background: #1698d9;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  left: 225px;
+  bottom: 16px;
+}
+
+.PackOfFeed-ball_selected {
+  background: #d91667;
+}
+
+/* .PackOfFeed-ball_hover {
+  background: #2ea8e6;
+} */
+
+.PackOfFeed-ball_ended {
+  background: #b3b3b3;
+}
+
+.PackOfFeed-weight {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+.PackOfFeed-weight_value {
+  padding-top: 18px;
+  font-size: 42px;
+  text-align: center;
+  font-family: "Trebuchet MS";
+  color: white;
+}
+
+.PackOfFeed-weight_measure {
+  font-size: 21px;
+  text-align: center;
+  font-family: "Trebuchet MS";
+  color: white;
 }
 
 .PackOfFeed-caption {
@@ -18,6 +96,7 @@
   font-size: 13px;
   margin-top: 16px;
   font-family: "Trebuchet MS", serif;
+  text-shadow: 1px 1px 2px #000, 0 0 1em #000, 0 0 0.2em #000;
 }
 
 .PackOfFeed-caption_link {
@@ -28,4 +107,29 @@
 
 .PackOfFeed-caption_link_ {
   color: #138ac6;
+}
+
+@media screen and (max-width: 470px) {
+  .App-header {
+    font-size: 26px;
+  }
+  .PackOfFeed {
+    width: 300px;
+    height: 440px;
+  }
+  .PackOfFeed-ball {
+    left: 200px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .App-header {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .App-header {
+    font-size: 16px;
+  }
 }

@@ -1,8 +1,14 @@
 .Description {
-  margin: 25px 0 0 46px;
+  position: absolute;
   display: flex;
   align-items: left;
   flex-direction: column;
+  top: 15px;
+  left: 48px;
+}
+
+.Description_ended {
+  opacity: 0.5;
 }
 
 .Description-slogan {
