@@ -5,22 +5,47 @@ import Description from "./description";
 
 function PackOfFeed(props) {
   let food = props.info;
-  const [isSelected, setSelected] = useState(false);
-  const [isHovered, setHover] = useState(false);
   const packOfFeed = cn("PackOfFeed");
   const packOfFeedBall = cn("PackOfFeed-ball");
   const packOfFeedCat = cn("PackOfFeed-cat");
 
-  const toogleSelect = () => {
-    if (isSelected && !food.isEnded) {
-      setSelected(false);
-    } else if (!food.isEnded) {
-      setSelected(true);
+  const [styleOfPack, setStyleOfPack] = useState(0);
+  const styles = {
+    0: "Default",
+    1: "DefaultHover",
+    2: "Selected",
+    3: "SelectedHover",
+  };
+
+  const handleMouseEnter = () => {
+    if (styleOfPack === 2) {
+      setStyleOfPack(3);
+    } else {
+      setStyleOfPack(1);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (styleOfPack === 3) {
+      setStyleOfPack(2);
+    } else if (styleOfPack !== 2) {
+      setStyleOfPack(0);
+    }
+  };
+
+  const handleMouseClick = () => {
+    if (food.isEnded) return;
+    if (styleOfPack === 2) {
+      setStyleOfPack(0);
+    } else if (styleOfPack === 3) {
+      setStyleOfPack(1);
+    } else {
+      setStyleOfPack(2);
     }
   };
 
   let caption = () => {
-    if (isSelected) {
+    if (styleOfPack === 2 || styleOfPack === 3) {
       return food.description;
     } else if (food.isEnded) {
       return (
@@ -33,7 +58,7 @@ function PackOfFeed(props) {
         <span>
           Чего сидишь? Порадуй котэ,{" "}
           <a
-            onClick={toogleSelect}
+            onClick={handleMouseClick}
             className="PackOfFeed-caption_link"
             href="#"
           >
@@ -45,49 +70,18 @@ function PackOfFeed(props) {
     }
   };
 
-  const deleteHoverColor = () => {
-    if (isSelected && !food.isEnded) {
-      setHover(false);
-    } else if (!food.isEnded) {
-      setHover(false);
-    }
-  };
-
-  const ref = React.createRef();
-
-  const setHoverColor = () => {
-    if (isSelected && !food.isEnded) {
-      setHover(true);
-    } else if (!food.isEnded) {
-      setHover(true);
-      console.log(
-        packOfFeedBall({
-          selected: isSelected,
-          ended: food.isEnded,
-          hover: isHovered,
-        })
-      );
-    }
-  };
-
   return (
     <figure>
       <div
-        onMouseOver={setHoverColor}
-        onMouseLeave={deleteHoverColor}
-        onClick={toogleSelect}
-        ref={ref}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleMouseClick}
         className={packOfFeed({
-          selected: isSelected,
+          style: styles[styleOfPack],
           ended: food.isEnded,
-          hover: isHovered,
         })}
       >
-        <Description
-          info={food}
-          isHovered={isHovered}
-          isSelected={isSelected}
-        />
+        <Description info={food} style={styleOfPack} />
         <img
           className={packOfFeedCat({ ended: food.isEnded })}
           src="/images/Cat.png"
@@ -95,9 +89,8 @@ function PackOfFeed(props) {
         />
         <div
           className={packOfFeedBall({
-            selected: isSelected,
+            style: styles[styleOfPack],
             ended: food.isEnded,
-            hover: isHovered,
           })}
         >
           <div className="PackOfFeed-weight">

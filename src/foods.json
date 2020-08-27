@@ -23,7 +23,7 @@
     },
     {
       "id": 2,
-      "isEnded": true,
+      "isEnded": false,
       "taste": "с курой",
       "numberOfservings": "100",
       "bonus": "5 мышей в подарок заказчик доволен",

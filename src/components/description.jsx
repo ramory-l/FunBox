@@ -5,9 +5,8 @@ import "./styles/description.css";
 function Description(props) {
   let food = props.info;
   const description = cn("Description");
-  console.log(props);
   let slogan = () => {
-    if (props.isHovered && props.isSelected) {
+    if (props.style === 3) {
       return <span style={{ color: "#e62e7a" }}>Котэ не одобряет?</span>;
     } else {
       return "Сказачное заморское яство";
