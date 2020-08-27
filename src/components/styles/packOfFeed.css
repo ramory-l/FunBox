@@ -4,6 +4,9 @@
   height: 460px;
   border-radius: 10px;
   clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+  -o-clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+  -ms-clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
   overflow: hidden;
   cursor: pointer;
 }
@@ -17,6 +20,9 @@
   background-color: white;
   border-radius: 10px;
   clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+  -o-clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
+  -ms-clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 10%);
   overflow: hidden;
 }
 
